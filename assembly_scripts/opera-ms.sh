@@ -1,6 +1,6 @@
 #!/bin/bash
-long=`pwd`/$1
-read=`pwd`/$2
+read=`pwd`/$1
+long=`pwd`/$2
 out=$3
 
 set -e
