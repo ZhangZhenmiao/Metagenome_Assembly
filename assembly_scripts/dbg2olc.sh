@@ -1,7 +1,7 @@
 reads=`pwd`/$1
 long=`pwd`/$2
-gsize=$3
-out=$4
+out=$3
+gsize=$4
 threads=100
 
 set -e
