@@ -1,6 +1,6 @@
 contig=$1
-long=`pwd`/$2
-short=`pwd`/$3
+short=`pwd`/$2
+long=`pwd`/$3
 out=$4
 source ~/.bashrc
 conda deactivate; conda activate python2
