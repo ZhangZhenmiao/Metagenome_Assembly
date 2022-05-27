@@ -1,6 +1,7 @@
-output=$1
-genome=$2
-reads=$3
+reads=$1
+output=$2
+genome=$3
+
 
 mkdir $output
 
