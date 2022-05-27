@@ -10,7 +10,7 @@
 ### Long-read assemblers
 - metaFlye ```assembly_scripts/metaflye.sh <reads> <output>```
 - Canu ```assembly_scripts/canu.sh <reads> <output> <genome_size>```
-- Lathe ```assembly_scripts/lathe.sh <contig_template> <long_reads> <short_reads> <output> <genome_size>```
+- Lathe ```assembly_scripts/lathe.sh <long_reads> <short_reads> <output> <genome_size>```
 - Shasta ```assembly_scripts/shasta.sh <reads> <output>```
 - MECAT2 ```assembly_scripts/mecat2.sh <reads> <output> <genome_size>```
 - NECAT ```assembly_scripts/necat.sh <reads> <output> <genome_size>```
