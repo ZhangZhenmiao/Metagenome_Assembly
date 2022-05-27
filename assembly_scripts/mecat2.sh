@@ -1,8 +1,8 @@
 set -e
-out=$1
-read=$2
+read=$1
+out=$2
 gs=$3
-thread=$4
+thread=100
 
 if [ ! -d $out ]
 then
