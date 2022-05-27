@@ -1,6 +1,6 @@
 set -e
-out=$1
-read=`pwd`/$2
+read=`pwd`/$1
+out=$2
 gs=$3
 thread=16
 
