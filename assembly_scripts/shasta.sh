@@ -1,5 +1,5 @@
-out=$1
-read=`pwd`/$2
+read=`pwd`/$1
+out=$2
 thread=100
 set -e
 if [ ! -d $out ]
