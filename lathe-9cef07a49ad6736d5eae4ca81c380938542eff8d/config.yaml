@@ -1,0 +1,28 @@
+# data input
+# file_names_txt is a 2 or 3 column tsv with the following columns
+# SAMPLE_NAME     FAST5/FASTQ_READS      SHORT_READS_1,SHORT_READS_2
+# sample name in the first column will be used to name ouptut
+# the second column can be a directory containing fast5 files (the output of a nanopore run)
+#   -OR- a single fastq file containing basecalled data 
+# Optionally, a short read sequencing dataset can be provided in the third column, 
+#   with pairs separated by a comma. If this option is selected, short read
+#   polishing will be turned on. 
+file_names_txt: 'sample_reads.txt'
+flowcell: 'FLO-MIN106'
+kit: 'SQK-LSK109'
+
+#workflow steps to perform
+assembler: 'flye' #or canu
+min_contig_size: 0 #remove contigs smaller than this from the assembly (can speed up polishing but potentially hurt genome completeness)
+skip_circularization: False
+skip_polishing: False
+polish_both: False #should the input to short read polishing be the output of long read polishing?
+
+#the below options are all related to Canu. genome_size is used by Flye as well.
+canu_args: 'cnsThreads=2 cnsMemory=32'
+usegrid: True #should Canu use the grid?
+grid_options: '--time=80:00:00 --account asbhatt'
+genome_size: '100m,250m' #Estimated genome size. The default values work well for typical healthy human gut samples.
+                        #A single value can be specified instead, which will perform only one assembly and bypass
+                        #merging. This would be suitable for bacterial isolate data, small datasets or very simple
+                        #metagenomes.
